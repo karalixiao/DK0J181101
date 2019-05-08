@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.kgc</groupId>
+  <artifactId>app</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  
+  
+  <properties>
+      <spring.version>5.1.0.RELEASE</spring.version>
+    <mysql-connector-java>8.0.16</mysql-connector-java>
+    <mybatis.version>3.5.1</mybatis.version>
+    <mybatis-spring.version>2.0.1</mybatis-spring.version>
+    <druid.version>1.1.16</druid.version>
+    <jackson.version>2.9.8</jackson.version>
+   </properties>
+   
+   
+  <dependencies>
+  <!--添加spring mvc依赖关系[begin] -->
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+   </dependency>
+  <!--添加spring mvc依赖关系[end] -->
+  
+  <!--添加spring JDBC依赖关系[begin] -->
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+   </dependency>
+  <!--添加spring JDBC依赖关系[end] -->
+  
+  <!--添加 mysql依赖关系[begin] -->
+  <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql-connector-java}</version>
+   </dependency>
+  <!--添加mysql依赖关系[end] -->
+  
+    <!--添加 mybtis依赖关系[begin] -->
+  <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+   </dependency>
+  <!--添加mybtis依赖关系[end] -->
+
+    <!--添加 mybtis 和spring结合依赖关系[begin] -->
+  <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+   </dependency>
+   <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>${mybatis-spring.version}</version>
+   </dependency>
+  <!--添加mybtis 和spring结合依赖关系[end] -->
+  
+  <!--添加 druid依赖关系[begin] -->
+  <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+   </dependency>
+  <!--添加 druid依赖关系[end] -->
+  
+   <!--添加 jackson依赖关系[begin] -->
+  <dependency>	
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+   </dependency>
+  <!--添加 jackson依赖关系[end] -->
+  
+    <!--添加 servlet.jsp.jstl依赖关系[begin] -->
+  <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+   </dependency>
+   <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.3</version>
+      <scope>provided</scope>
+   </dependency>
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>     
+   </dependency>
+  <!--添加 servlet.jsp.jstl依赖关系[end] -->
+  </dependencies>
+  
+  
+  <modules>
+    <module>app-common</module>
+    <module>app-dao</module>
+    <module>app-service</module>
+    <module>app-controller</module>
+  </modules>
+</project>
